@@ -2,12 +2,24 @@
 
 using namespace std;
 
-int main(int argc, char ** argv)
+constexpr int fib(int n)
 {
-    
+    if (n == 1 || n == 2)
+        return 1;
+    return fib(n-1) + fib(n-2);
 }
 
-constexpr int cumsum(int s)
+int main(int argc, char ** argv)
 {
-    return s ? s + cumsum(s-1) : 0;
+    for (auto x : {1, 2, 3, 4, 5, 6, 7})
+        cout << fib(x) << endl;
+
+
+    // to const expression;
+    int f10 = fib(10);
+    int f11 = fib(11);
+
+    cout << f10 << " " << f11 << endl;
+
+    return 0;
 }
