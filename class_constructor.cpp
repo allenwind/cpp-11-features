@@ -2,8 +2,6 @@
 
 using namespace std;
 
-
-
 // 委托构造函数
 // 在同一类中一构造函数调用另一构造函数
 class S

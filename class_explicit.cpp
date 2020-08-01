@@ -28,6 +28,6 @@ int main(int argc, char ** argv)
     cout << "queue size:" << queue.size() << endl;
 
     // 不可以被隐式转换
-    List list(10); // List list = 10; error
+    List list(10); // List list = 10; is error
     cout << "list size:" << list.size() << endl;
 }

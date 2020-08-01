@@ -9,6 +9,12 @@ constexpr int fib(int n)
     return fib(n-1) + fib(n-2);
 }
 
+// or
+// constexpr int fib(int n)
+// {
+//     return (n == 1 || n == 2) ? 1 : fib(n-1) + fib(n-2);
+// }
+
 int main(int argc, char ** argv)
 {
     for (auto x : {1, 2, 3, 4, 5, 6, 7})

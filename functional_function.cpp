@@ -43,4 +43,14 @@ int main(int argc, char ** argv)
 
     //function<double(array<double, 5>)> f2 = V::sum;
 
+    // 利用 function 写递归匿名函数
+    function<int(int)> fib = [&fib](int x) -> int
+    {
+        return (x == 1 || x == 2) ? 1 : fib(x - 1) + fib(x - 2); 
+    };
+
+    cout << fib(1) << endl;
+    cout << fib(2) << endl;
+    cout << fib(10) << endl;
+
 }
