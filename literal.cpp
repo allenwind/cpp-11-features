@@ -1,4 +1,5 @@
 #include <iostream>
+#include <thread>
 
 using namespace std;
 
@@ -16,6 +17,8 @@ int main(int argc, char ** argv)
 {
     Love l100 = 100_love;
     cout << l100.value << endl;
+
+    this_thread::sleep_for(100ms);
 
     return 0;
 }

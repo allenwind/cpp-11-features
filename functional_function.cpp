@@ -36,12 +36,10 @@ double sum(array<double, 5> arr)
 
 int main(int argc, char ** argv)
 {   
-    // std::function
+    // std::function 可调用对象的封装器
     array<double, 5> arr = {1, 2, 3, 4, 5};
     function<double(array<double, 5>)> f1 = sum;
     cout << sum(arr) << endl;
-
-    //function<double(array<double, 5>)> f2 = V::sum;
 
     // 利用 function 写递归匿名函数
     function<int(int)> fib = [&fib](int x) -> int
