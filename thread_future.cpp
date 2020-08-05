@@ -1,6 +1,7 @@
 #include <iostream>
-
-using namespace std;
+#include <functional>
+#include <thread>
+#include <future>
 
 int main(int argc, char ** argv)
 {

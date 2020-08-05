@@ -85,14 +85,32 @@ void List::show()
     cout << endl;
 }
 
+// stump
+class Stump
+{
+private:
+    int rs;
+    double wt;
+public:
+    Stump(int r, double w) : rs(r), wt(w) {}
+    int roots() const { return rs; }
+    double weight() const { return wt; }
+};
+
 // 初始化列表接受任意长度
 // 统一{}初始化
+// 预防缩窄
 
 int main(int argc, char ** argv)
 {   
     // int initializer_list
     int a = {1};
     cout << a << endl;
+
+    Stump s = { 100, 188.1 }; // class init
+    cout << s.roots() << " " << s.weight() << endl;
+
+    // int sr = {1.8e99}; // narrowing conversion, is error
 
     // array initializer_list
     int b[5] = {1, 2, 3, 4, 5};

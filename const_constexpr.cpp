@@ -2,6 +2,18 @@
 
 using namespace std;
 
+void const_examples()
+{
+    const int a = 1;
+
+    int b = 2;
+    const int & c = b;
+    // c = 3 is error;
+    b = 3; // is ok
+    cout << "b = " << b << endl;
+    cout << "c = " << c << endl;
+}
+
 constexpr int fib(int n)
 {
     if (n == 1 || n == 2)
@@ -17,9 +29,10 @@ constexpr int fib(int n)
 
 int main(int argc, char ** argv)
 {
+    const_examples();
+
     for (auto x : {1, 2, 3, 4, 5, 6, 7})
         cout << fib(x) << endl;
-
 
     // to const expression;
     int f10 = fib(10);

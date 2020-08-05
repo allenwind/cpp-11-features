@@ -13,4 +13,7 @@ int main(int argc, char ** argv)
 
     char32_t k;
     cout << sizeof(k) << endl;
+
+    unsigned long long x;
+    cout << sizeof(x) << endl;
 }

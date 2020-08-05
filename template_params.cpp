@@ -13,5 +13,5 @@ void func(T t, U u)
 
 int main(int argc, char ** argv)
 {
-    func<string>("C++");
+    func<string>("C++", 1);
 }
