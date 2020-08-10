@@ -23,6 +23,7 @@ int main(int argc, char ** argv)
     cout << b << endl;
 
     // lambda opt默认是const，不能修改成员变量，而加mutable能
+    // auto add_x2 = [=](int x) -> void { b += x; }; is error
     auto add_x2 = [=](int x) mutable -> void { b += x; };
     add_x2(10);
     cout << b << endl;
